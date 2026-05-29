@@ -3,7 +3,6 @@
 Página de presentación del equipo de VIII Semestre.
 
 ## Integrantes
-- Sebastián Romero
 - Adrian Saavedra
 - Andrea Katherin Palacio
 
