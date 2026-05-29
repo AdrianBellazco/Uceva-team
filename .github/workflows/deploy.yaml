@@ -31,8 +31,13 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      #Build del proyecto
+      - name: Build Angular Project
+        run: ng build
+
       # Pruebas de consola
       - name: Pruebas consola
         run: |
           pwd
           ls -la
+          
