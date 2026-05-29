@@ -1,0 +1,50 @@
+<div class="page">
+
+  <!-- Background grid -->
+  <div class="grid-bg"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="hero-sub">UCEVA · 2025</div>
+    <div class="hero-sub">VIII Semestre</div>
+  </header>
+
+  <!-- Hero -->
+  <main class="hero">
+    <div class="hero-sub">Ingeniería en Sistemas</div>
+
+    <h1 class="hero-title">
+      <span class="hero-sub">Team</span>
+      <span class="hero-sub">4</span>
+    </h1>
+
+    <p class="hero-sub">
+      Ingenieros en proceso.
+    </p>
+  </main>
+
+  <!-- Team cards -->
+  <section class="team">
+    <div
+      class="card"
+      *ngFor="let m of members; let i = index"
+      [style.animation-delay]="m.delay"
+    >
+      <div class="card-number">{{ '0' + (i + 1) }}</div>
+      <div class="card-avatar">{{ m.initials }}</div>
+      <div class="card-info">
+        <h2 class="card-name">{{ m.name }}</h2>
+        <span class="card-role">{{ m.role }}</span>
+      </div>
+      <div class="card-accent"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <span class="hero-sub">Universidad Central del Valle del Cauca</span>
+    <span class="dot">·</span>
+    <span class="hero-sub">Facultad de Ciencias Básicas e Ingeniería</span>
+  </footer>
+
+</div>
