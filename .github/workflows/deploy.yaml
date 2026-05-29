@@ -13,11 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    #clonar el repositorio en la maquina del runner
-      - name: Checkout chode
+      # Clonar el repositorio en la máquina del runner
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-
-      - name: pruebas Consola
-      run: |
-        ls -la 
-    
+      - name: Pruebas consola
+        run: |
+          pwd
+          ls -la
