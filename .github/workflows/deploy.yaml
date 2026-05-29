@@ -21,11 +21,24 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '24'
+          node-version: '20'
 
       # Verificar estructura del repositorio
       - name: Pruebas consola
         run: |
           pwd
           ls -la
-          find . -maxdepth 2 -type f
+
+      # Instalar dependencias
+      - name: Install Dependencies
+        run: npm install
+
+      # Compilar proyecto Angular
+      - name: Build Angular Project
+        run: npm run build
+
+      # Verificar carpeta dist
+      - name: Verificar build generado
+        run: |
+          ls -la
+          ls -la dist
