@@ -23,21 +23,9 @@ jobs:
         with:
           node-version: '24'
 
-      # Configurar Angular CLI
-      - name: Setup Angular CLI
-        run: npm install -g @angular/cli
-
-      # Instalar dependencias del proyecto
-      - name: Install Dependencies
-        run: npm install
-
-      #Build del proyecto
-      - name: Build Angular Project
-        run: ng build
-
-      # Pruebas de consola
+      # Verificar estructura del repositorio
       - name: Pruebas consola
         run: |
           pwd
           ls -la
-          
+          find . -maxdepth 2 -type f
