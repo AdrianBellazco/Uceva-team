@@ -1,0 +1,23 @@
+name: Deploy to Siteground - HallOfDoom
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    #clonar el repositorio en la maquina del runner
+      - name: Checkout chode
+
+
+      - name: pruebas Consola
+      run: |
+        ls -la 
+    
