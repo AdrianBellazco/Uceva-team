@@ -21,23 +21,24 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '24'
+          node-version: '20'
 
-      # Configurar Angular CLI
-      - name: Setup Angular CLI
-        run: npm install -g @angular/cli
+      # Verificar archivos del repositorio
+      - name: Verificar estructura del proyecto
+        run: |
+          pwd
+          ls -la
 
       # Instalar dependencias del proyecto
       - name: Install Dependencies
         run: npm install
 
-      #Build del proyecto
+      # Build del proyecto Angular
       - name: Build Angular Project
-        run: ng build
+        run: npm run build
 
-      # Pruebas de consola
-      - name: Pruebas consola
+      # Verificar carpeta dist
+      - name: Verificar build generado
         run: |
-          pwd
           ls -la
-          
+          ls -la dist
